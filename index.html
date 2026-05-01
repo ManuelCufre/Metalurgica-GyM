@@ -8,9 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Montserrat', sans-serif; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
@@ -256,7 +256,7 @@
     </div>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="py-20 bg-[#0F172A]">
+    <section id="contacto" class="py-20 bg-[#0F172A] text-white">
         <div class="container mx-auto px-8 md:px-16 lg:px-24">
             <div class="mb-4 reveal">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 inline-block relative">
@@ -264,30 +264,101 @@
                     <div class="absolute -bottom-2 left-0 w-20 h-1 bg-[#6EB7F0]"></div>
                 </h2>
             </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
                 <div class="space-y-6 reveal">
                     <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6">
                         <h3 class="text-xl font-bold mb-2">¿Preferís escribirnos directo?</h3>
-                        <p class="text-zinc-400 text-sm mb-6">Abrí el chat de WhatsApp y charlamos ahora mismo.</p>
-                        <a href="https://wa.me/5493584872396" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-semibold flex items-center justify-center gap-2">
-                            Abrir chat ahora <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <p class="text-zinc-400 text-sm mb-6">
+                            Abrí el chat de WhatsApp y charlamos ahora mismo.
+                        </p>
+
+                        <a
+                            href="https://wa.me/5493584872396"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg transition-all duration-300 text-center font-semibold flex items-center justify-center gap-2"
+                        >
+                            Abrir chat ahora
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
                         </a>
+
                         <div class="mt-6 space-y-4">
-                            <div class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 w-5"></i><p class="text-sm">Atención personalizada</p></div>
-                            <div class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 w-5"></i><p class="text-sm">Respuesta en el día (8 a 18 h)</p></div>
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="text-white font-semibold text-sm">Atención personalizada</p>
+                                    <p class="text-zinc-400 text-xs">Un asesor te responde.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="text-white font-semibold text-sm">Respuesta en el día</p>
+                                    <p class="text-zinc-400 text-xs">Horarios hábiles de 8 a 18 h.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-3">
+                                <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5"></i>
+                                <div>
+                                    <p class="text-white font-semibold text-sm">Asesoramiento sin cargo</p>
+                                    <p class="text-zinc-400 text-xs">Nos contás y te guiamos.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
+                    <p class="text-zinc-400 text-sm">
+                        También podés completar el formulario y te respondemos por WhatsApp con los detalles.
+                    </p>
                 </div>
+
                 <div class="reveal">
                     <form id="contact-form" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" id="nombre" placeholder="Nombre" required class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
-                            <input type="text" id="apellido" placeholder="Apellido" required class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
+                            <input
+                                type="text"
+                                id="nombre"
+                                placeholder="Nombre"
+                                required
+                                class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-[#6EB7F0] text-white placeholder:text-zinc-500 transition-colors text-sm"
+                            />
+                            <input
+                                type="text"
+                                id="apellido"
+                                placeholder="Apellido"
+                                required
+                                class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-[#6EB7F0] text-white placeholder:text-zinc-500 transition-colors text-sm"
+                            />
                         </div>
-                        <input type="email" id="email" placeholder="Email (opcional)" class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
-                        <textarea id="mensaje" placeholder="Contanos cómo podemos ayudarte" rows="6" required class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm resize-none"></textarea>
-                        <button type="submit" class="w-full bg-[#6EB7F0] hover:bg-[#5da5dc] text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-transform hover:scale-105">
-                            Enviar por WhatsApp <i data-lucide="message-circle" class="w-5 h-5"></i>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Email (opcional)"
+                            class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-[#6EB7F0] text-white placeholder:text-zinc-500 transition-colors text-sm"
+                        />
+
+                        <textarea
+                            id="mensaje"
+                            placeholder="Contanos cómo podemos ayudarte"
+                            rows="6"
+                            required
+                            class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:outline-none focus:border-[#6EB7F0] text-white placeholder:text-zinc-500 transition-colors text-sm resize-none"
+                        ></textarea>
+
+                        <p class="text-xs text-zinc-500">
+                            Al enviar, se abrirá WhatsApp con tu consulta precompletada.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-[#6EB7F0] hover:bg-[#5da5dc] text-white py-3 px-6 rounded-lg transition-all duration-300 hover:scale-105 text-sm font-semibold flex items-center justify-center gap-2"
+                        >
+                            Enviar por WhatsApp
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
                         </button>
                     </form>
                 </div>
@@ -412,10 +483,10 @@
         // Lógica de Formulario a WhatsApp
         document.getElementById('contact-form').addEventListener('submit', (e) => {
             e.preventDefault();
-            const nombre = document.getElementById('nombre').value;
-            const apellido = document.getElementById('apellido').value;
-            const email = document.getElementById('email').value;
-            const mensaje = document.getElementById('mensaje').value;
+            const nombre = document.getElementById('nombre').value.trim();
+            const apellido = document.getElementById('apellido').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensaje = document.getElementById('mensaje').value.trim();
 
             const texto = `Hola! Mi nombre es ${nombre} ${apellido}.\n\nEmail: ${email}\n\nConsulta: ${mensaje}`;
             const whatsappUrl = `https://wa.me/5493584872396?text=${encodeURIComponent(texto)}`;
