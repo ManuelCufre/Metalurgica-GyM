@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalúrgica Industrial GyM</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-[#0F172A] text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-gradient-to-b from-[#0F172A] to-transparent text-white sticky top-0 z-50">
+        <nav class="container mx-auto px-8 md:px-16 lg:px-24 py-4 backdrop-blur-md">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="font-bold text-lg">Metalurgica Industrial <span class="text-[#6EB7F0]">GyM</span></span>
+                </div>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex gap-8 text-sm">
+                    <a href="#inicio" class="hover:text-[#6EB7F0] transition-colors">Inicio</a>
+                    <a href="#servicios" class="hover:text-[#6EB7F0] transition-colors">Servicios</a>
+                    <a href="#nosotros" class="hover:text-[#6EB7F0] transition-colors">Nosotros</a>
+                    <a href="#proyectos" class="hover:text-[#6EB7F0] transition-colors">Proyectos</a>
+                    <a href="#contacto" class="hover:text-[#6EB7F0] transition-colors">Contacto</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden" id="menu-btn">
+                    <i data-lucide="menu" id="menu-icon"></i>
+                </button>
+            </div>
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 flex flex-col gap-4 text-sm border-t border-white/10 pt-4">
+                <a href="#inicio" class="hover:text-[#6EB7F0]">Inicio</a>
+                <a href="#servicios" class="hover:text-[#6EB7F0]">Servicios</a>
+                <a href="#nosotros" class="hover:text-[#6EB7F0]">Nosotros</a>
+                <a href="#proyectos" class="hover:text-[#6EB7F0]">Proyectos</a>
+                <a href="#contacto" class="hover:text-[#6EB7F0]">Contacto</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative min-h-[90vh] flex items-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('img/hero.jpg')">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0F172A]/95 via-[#0F172A]/85 to-[#0F172A]/70"></div>
+        </div>
+        <div class="container mx-auto px-8 md:px-16 lg:px-24 relative z-10">
+            <div class="max-w-3xl reveal">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6">
+                    Metalúrgica Industrial <span class="text-[#6EB7F0]">GyM</span>
+                </h1>
+                <p class="text-lg md:text-xl text-zinc-200 mb-4">
+                    Especialistas en soldadura profesional y fabricación de estructuras metálicas.
+                    Transformamos el metal en soluciones duraderas y de calidad para tu proyecto.
+                </p>
+                <div class="flex items-center gap-2 mb-8">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-[#6EB7F0]"></i>
+                    <span class="text-zinc-300 text-base">General Deheza, Córdoba</span>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#contacto" class="bg-[#6EB7F0] hover:bg-[#5da5dc] text-white px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm font-semibold">Contáctenos</a>
+                    <a href="#servicios" class="border-2 border-[#6EB7F0] hover:bg-[#6EB7F0] text-white px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg text-sm font-semibold">Ver Servicios</a>
+                </div>
+            </div>
+        </div>
+        <!-- Floating WhatsApp -->
+        <a href="https://wa.me/5493584872396" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+        </a>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-20 bg-[#0F172A]">
+        <div class="container mx-auto px-8 md:px-16 lg:px-24">
+            <div class="mb-8 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 inline-block relative">
+                    Nuestros Servicios
+                    <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-[#6EB7F0]"></div>
+                </h2>
+            </div>
+            <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Se genera con JS o manual. Aquí manual para que lo tengas listo -->
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">01</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="flame"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Soldadura Profesional</h3>
+                    <p class="text-zinc-400 text-sm">Trabajos en hierro, acero inoxidable y otros metales con terminaciones de calidad.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+                <!-- Añade los otros 5 servicios siguiendo el mismo patrón -->
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">02</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="truck"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Fabricación de tráiler</h3>
+                    <p class="text-zinc-400 text-sm">Carros, batanes y trailers reforzados para campo e industria.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">03</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="droplet"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Cisternas y tanques</h3>
+                    <p class="text-zinc-400 text-sm">Capacidades estándar y especiales para agua y combustible.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">04</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="warehouse"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Montaje de galpones</h3>
+                    <p class="text-zinc-400 text-sm">Armado completo de galpones metálicos llave en mano.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">05</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="cog"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Norias y transporte</h3>
+                    <p class="text-zinc-400 text-sm">Fabricación y montaje de norias, cintas transportadoras y elevadores de cangilones.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+                <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6 relative overflow-hidden group reveal">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl font-bold text-white/10">06</span>
+                        <div class="text-[#6EB7F0] group-hover:scale-110 transition-transform"><i data-lucide="wrench"></i></div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Mantenimiento industrial</h3>
+                    <p class="text-zinc-400 text-sm">Servicio técnico y mantenimiento de maquinaria industrial. Paradas de planta programadas y urgencias.</p>
+                    <div class="absolute bottom-0 left-0 w-full h-1 bg-[#6EB7F0] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros" class="py-20 bg-[#1E293B]">
+        <div class="container mx-auto px-8 md:px-16 lg:px-24">
+            <div class="mb-8 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 inline-block relative">
+                    Sobre Nosotros
+                    <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-[#6EB7F0]"></div>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="reveal">
+                    <p class="text-base text-zinc-300 mb-8">
+                        Somos una empresa metalúrgica con amplia trayectoria en el sector industrial y agropecuario, especializada en soldadura profesional, fabricación de estructuras metálicas, tráilers a medida, cisternas y mantenimiento industrial.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="bg-[#0F172A] border border-white/10 rounded-lg p-6 hover:border-[#6EB7F0] transition-colors duration-300 flex items-start gap-4">
+                            <div class="bg-[#6EB7F0]/10 p-3 rounded-full flex-shrink-0"><i data-lucide="target" class="w-6 h-6 text-[#6EB7F0]"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Misión</h3>
+                                <p class="text-zinc-400 text-sm">Brindar soluciones metalúrgicas confiables y de alta calidad garantizando seguridad y resistencia.</p>
+                            </div>
+                        </div>
+                        <div class="bg-[#0F172A] border border-white/10 rounded-lg p-6 hover:border-[#6EB7F0] transition-colors duration-300 flex items-start gap-4">
+                            <div class="bg-[#6EB7F0]/10 p-3 rounded-full flex-shrink-0"><i data-lucide="eye" class="w-6 h-6 text-[#6EB7F0]"></i></div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-2">Visión</h3>
+                                <p class="text-zinc-400 text-sm">Ser una empresa reconocida por la responsabilidad y el compromiso con cada cliente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative reveal">
+                    <img src="img/nosotros.jpg" alt="Metalúrgica Industrial GyM" class="rounded-lg shadow-2xl w-full h-auto object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A]/50 to-transparent rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="py-20 bg-[#0F172A]">
+        <div class="container mx-auto px-8 md:px-16 lg:px-24">
+            <div class="mb-8 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 inline-block relative">
+                    Proyectos Realizados
+                    <div class="absolute -bottom-2 left-0 w-1/3 h-1 bg-[#6EB7F0]"></div>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="projects-container">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer reveal" onclick="openGallery(0)">
+                    <img src="img/Estructura metálica para galpón industrial/proyecto1-1.jpeg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white font-bold text-lg mb-4">Estructura metálica para galpón industrial</h3>
+                        <span class="bg-[#6EB7F0] text-white px-6 py-2 rounded-lg text-sm font-semibold">Ver proyecto</span>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer reveal" onclick="openGallery(1)">
+                    <img src="img/Ampliacion de galpón/proyecto2-1.jpeg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white font-bold text-lg mb-4">Ampliación de galpón</h3>
+                        <span class="bg-[#6EB7F0] text-white px-6 py-2 rounded-lg text-sm font-semibold">Ver proyecto</span>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer reveal" onclick="openGallery(2)">
+                    <img src="img/Construcción de galpón metálico/proyecto3-1.jpeg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white font-bold text-lg mb-4">Construcción de galpón metálico</h3>
+                        <span class="bg-[#6EB7F0] text-white px-6 py-2 rounded-lg text-sm font-semibold">Ver proyecto</span>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer reveal" onclick="openGallery(3)">
+                    <img src="img/Ampliación de galpón con estructura metálica/proyecto4-1.jpeg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white font-bold text-lg mb-4">Ampliación de galpón con estructura metálica</h3>
+                        <span class="bg-[#6EB7F0] text-white px-6 py-2 rounded-lg text-sm font-semibold">Ver proyecto</span>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="group relative overflow-hidden rounded-lg aspect-[4/3] cursor-pointer reveal" onclick="openGallery(4)">
+                    <img src="img/Fabricación y montaje de estructura metálica/proyecto5-1.jpeg" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white font-bold text-lg mb-4">Fabricación y montaje de estructura metálica</h3>
+                        <span class="bg-[#6EB7F0] text-white px-6 py-2 rounded-lg text-sm font-semibold">Ver proyecto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL GALERÍA -->
+    <div id="gallery-modal" class="fixed inset-0 bg-black/95 z-[60] hidden flex-col items-center justify-center p-4">
+        <button onclick="closeGallery()" class="absolute top-4 right-4 text-white hover:text-[#6EB7F0] transition-colors"><i data-lucide="x" class="w-8 h-8"></i></button>
+        <div class="relative max-w-5xl w-full text-center">
+            <h3 id="modal-title" class="text-white text-2xl font-bold mb-4"></h3>
+            <div class="relative group">
+                <img id="modal-img" src="" class="w-full h-auto max-h-[70vh] object-contain rounded-lg">
+                <button onclick="prevImg()" class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white"><i data-lucide="chevron-left"></i></button>
+                <button onclick="nextImg()" class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 p-2 rounded-full text-white"><i data-lucide="chevron-right"></i></button>
+            </div>
+            <p id="modal-counter" class="text-white mt-4"></p>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-20 bg-[#0F172A]">
+        <div class="container mx-auto px-8 md:px-16 lg:px-24">
+            <div class="mb-4 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-2 inline-block relative">
+                    Contanos tu proyecto
+                    <div class="absolute -bottom-2 left-0 w-20 h-1 bg-[#6EB7F0]"></div>
+                </h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-8">
+                <div class="space-y-6 reveal">
+                    <div class="bg-[#1E293B] border border-white/10 rounded-lg p-6">
+                        <h3 class="text-xl font-bold mb-2">¿Preferís escribirnos directo?</h3>
+                        <p class="text-zinc-400 text-sm mb-6">Abrí el chat de WhatsApp y charlamos ahora mismo.</p>
+                        <a href="https://wa.me/5493584872396" target="_blank" class="block w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg text-center font-semibold flex items-center justify-center gap-2">
+                            Abrir chat ahora <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                        <div class="mt-6 space-y-4">
+                            <div class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 w-5"></i><p class="text-sm">Atención personalizada</p></div>
+                            <div class="flex items-start gap-3"><i data-lucide="check" class="text-green-500 w-5"></i><p class="text-sm">Respuesta en el día (8 a 18 h)</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" id="nombre" placeholder="Nombre" required class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
+                            <input type="text" id="apellido" placeholder="Apellido" required class="bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
+                        </div>
+                        <input type="email" id="email" placeholder="Email (opcional)" class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm">
+                        <textarea id="mensaje" placeholder="Contanos cómo podemos ayudarte" rows="6" required class="w-full bg-[#1E293B] border border-white/20 rounded-lg px-4 py-3 focus:border-[#6EB7F0] outline-none text-sm resize-none"></textarea>
+                        <button type="submit" class="w-full bg-[#6EB7F0] hover:bg-[#5da5dc] text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-transform hover:scale-105">
+                            Enviar por WhatsApp <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-zinc-400 py-12 border-t border-white/10">
+        <div class="container mx-auto px-8 md:px-16 lg:px-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4">Metalúrgica Industrial <span class="text-[#6EB7F0]">GyM</span></h3>
+                    <p class="text-sm">Soluciones metalúrgicas confiables para el sector industrial y agropecuario.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase mb-4">Navegación</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#inicio" class="hover:text-[#6EB7F0]">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-[#6EB7F0]">Servicios</a></li>
+                         <li><a href="#nosotros" class="hover:text-[#6EB7F0]">Nosotros</a></li>
+                        <li><a href="#proyectos" class="hover:text-[#6EB7F0]">Proyectos</a></li>
+                         <li><a href="#contacto" class="hover:text-[#6EB7F0]">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-2"><i data-lucide="phone" class="w-4 text-[#6EB7F0]"></i> +54 9 358 487 2396</li>
+                        <li class="flex gap-2"><i data-lucide="mail" class="w-4 text-[#6EB7F0]"></i> miguel33gutierrez202214@gmail.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm uppercase mb-4">Redes</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-[#6EB7F0] rounded flex items-center justify-center transition-colors"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 hover:bg-[#6EB7F0] rounded flex items-center justify-center transition-colors"><i data-lucide="facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 text-center text-xs border-t border-white/10">© 2026 Metalúrgica Industrial GyM. Todos los derechos reservados.</div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Lógica de Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Animaciones al hacer scroll (Reemplaza motion)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lógica de Proyectos y Galería
+        const projects = [
+            {
+                title: "Estructura metálica para galpón industrial",
+                images: ["img/Estructura metálica para galpón industrial/proyecto1-1.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-2.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-3.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-4.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-5.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-6.jpeg", "img/Estructura metálica para galpón industrial/proyecto1-7.jpeg"]
+            },
+            {
+                title: "Ampliación de galpón",
+                images: ["img/Ampliacion de galpón/proyecto2-1.jpeg", "img/Ampliacion de galpón/proyecto2-2.jpeg", "img/Ampliacion de galpón/proyecto2-3.jpeg", "img/Ampliacion de galpón/proyecto2-4.jpeg", "img/Ampliacion de galpón/proyecto2-5.jpeg"]
+            },
+            {
+                title: "Construcción de galpón metálico",
+                images: ["img/Construcción de galpón metálico/proyecto3-1.jpeg", "img/Construcción de galpón metálico/proyecto3-2.jpeg", "img/Construcción de galpón metálico/proyecto3-3.jpeg"]
+            },
+            {
+                title: "Ampliación de galpón con estructura metálica",
+                images: ["img/Ampliación de galpón con estructura metálica/proyecto4-1.jpeg", "img/Ampliación de galpón con estructura metálica/proyecto4-2.jpeg", "img/Ampliación de galpón con estructura metálica/proyecto4-3.jpeg"]
+            },
+            {
+                title: "Fabricación y montaje de estructura metálica",
+                images: ["img/Fabricación y montaje de estructura metálica/proyecto5-1.jpeg", "img/Fabricación y montaje de estructura metálica/proyecto5-2.jpeg"]
+            }
+        ];
+
+        let currentProjectIdx = 0;
+        let currentImgIdx = 0;
+
+        function openGallery(idx) {
+            currentProjectIdx = idx;
+            currentImgIdx = 0;
+            updateModal();
+            document.getElementById('gallery-modal').classList.remove('hidden');
+            document.getElementById('gallery-modal').classList.add('flex');
+        }
+
+        function closeGallery() {
+            document.getElementById('gallery-modal').classList.add('hidden');
+            document.getElementById('gallery-modal').classList.remove('flex');
+        }
+
+        function updateModal() {
+            const project = projects[currentProjectIdx];
+            document.getElementById('modal-title').innerText = project.title;
+            document.getElementById('modal-img').src = project.images[currentImgIdx];
+            document.getElementById('modal-counter').innerText = `${currentImgIdx + 1} / ${project.images.length}`;
+        }
+
+        function nextImg() {
+            currentImgIdx = (currentImgIdx + 1) % projects[currentProjectIdx].images.length;
+            updateModal();
+        }
+
+        function prevImg() {
+            currentImgIdx = (currentImgIdx - 1 + projects[currentProjectIdx].images.length) % projects[currentProjectIdx].images.length;
+            updateModal();
+        }
+
+        // Lógica de Formulario a WhatsApp
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            const texto = `Hola! Mi nombre es ${nombre} ${apellido}.\n\nEmail: ${email}\n\nConsulta: ${mensaje}`;
+            const whatsappUrl = `https://wa.me/5493584872396?text=${encodeURIComponent(texto)}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html>
